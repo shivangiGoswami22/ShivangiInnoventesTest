@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/first_of_the_few_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/nunitosans_10pt_bold"
+        android:text="@string/first_of_the_few"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/pan_number_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/nunitosans_10pt_regular"
+        android:text="@string/pan_number"
+        android:textColor="#637381"
+        android:textFontWeight="700"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/first_of_the_few_text" />
+
+    <EditText
+        android:id="@+id/etPanNumber"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/edittext_bg"
+        android:fontFamily="@font/nunitosans_10pt_regular"
+        android:gravity="center_vertical|start"
+        android:singleLine="true"
+        android:maxLength="10"
+        android:paddingHorizontal="5dp"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/pan_number_text" />
+
+    <TextView
+        android:id="@+id/birth_date_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/nunitosans_10pt_regular"
+        android:text="@string/birth_date"
+        android:textColor="#637381"
+        android:textFontWeight="700"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/etPanNumber" />
+
+    <EditText
+        android:id="@+id/et_date"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/edittext_bg"
+        android:fontFamily="@font/nunitosans_10pt_regular"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingHorizontal="5dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:textSize="14sp"
+        android:maxLength="2"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/et_month"
+        app:layout_constraintHorizontal_weight=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/birth_date_text" />
+
+    <EditText
+        android:id="@+id/et_month"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/edittext_bg"
+        android:fontFamily="@font/nunitosans_10pt_regular"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingHorizontal="5dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:textSize="14sp"
+        android:maxLength="2"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/et_year"
+        app:layout_constraintHorizontal_weight=".5"
+        app:layout_constraintStart_toEndOf="@id/et_date"
+        app:layout_constraintTop_toBottomOf="@id/birth_date_text" />
+
+    <EditText
+        android:id="@+id/et_year"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edittext_bg"
+        android:fontFamily="@font/nunitosans_10pt_regular"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingHorizontal="5dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:textSize="14sp"
+        android:maxLength="4"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/et_month"
+        app:layout_constraintTop_toBottomOf="@id/birth_date_text" />
+
+    <TextView
+        android:id="@+id/dont_have_pan"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/nunitosans_10pt_bold"
+        android:gravity="center"
+        android:text="@string/i_dont_have_pan"
+        android:textColor="#02196A"
+        android:textFontWeight="700"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:backgroundTint="#010953"
+        android:text="Next"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/dont_have_pan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/nunitosans_10pt_regular"
+        android:gravity="center_vertical|start"
+        android:text="@string/providing_pan_and_date"
+        android:textColor="#333333"
+        android:textFontWeight="700"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegister" />
+
+
+    <!--<EditText
+        android:id="@+id/etPanNumber1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="PAN Number"
+        android:inputType="text"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>-->
+
+    <!--  <EditText
+          android:id="@+id/etBirthDate"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="Birth Date (dd/MM/yyyy)"
+          android:inputType="date"
+          app:layout_constraintTop_toBottomOf="@+id/etPanNumber"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          android:layout_marginStart="16dp"
+          android:layout_marginEnd="16dp"/>-->
+
+    <!--   <Button
+           android:id="@+id/btnRegister"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="Register"
+           app:layout_constraintTop_toBottomOf="@+id/etBirthDate"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginStart="16dp"
+           android:layout_marginEnd="16dp"/>
+
+
+   -->
+    <!-- <Button
+         app:layout_constraintTop_toBottomOf="@id/btnRegister"
+         android:id="@+id/btnValidate"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Validate" />
+ -->
+</androidx.constraintlayout.widget.ConstraintLayout>
